@@ -7,6 +7,7 @@ require 'uphold/api/public_transaction'
 require 'uphold/api/ticker'
 require 'uphold/api/transparency'
 require 'uphold/api/user'
+require 'uphold/api/voucher'
 
 module Uphold
   module API
@@ -18,5 +19,6 @@ module Uphold
     include API::Ticker
     include API::Transparency
     include API::User
+    include API::Voucher
   end
 end

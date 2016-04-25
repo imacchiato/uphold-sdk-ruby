@@ -15,6 +15,7 @@ module Uphold
     USER = '/me'
     USER_CONTACTS = '/me/contacts'
     USER_PHONES = '/me/phones'
+    VOUCHER = '/vouchers'
 
     def self.with_placeholders(endpoint, substitutions = {})
       new_endpoint = endpoint.dup
