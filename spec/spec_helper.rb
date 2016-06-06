@@ -6,6 +6,7 @@ end
 require 'uphold'
 require 'climate_control'
 require 'pry'
+require "active_support/core_ext/hash/indifferent_access"
 
 Dir[File.join(Uphold::ROOT_PATH, '..', 'spec/support/**/*.rb')].each { |f| require f }
 
@@ -28,3 +29,6 @@ RSpec.configure do |config|
     Uphold.sandbox = true
   end
 end
+
+SPEC_DIR = Pathname.new(File.dirname(__FILE__))
+CONFIG = YAML.load_file(SPEC_DIR.join("config.yml")).with_indifferent_access
